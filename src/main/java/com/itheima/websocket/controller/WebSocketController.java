@@ -35,7 +35,9 @@ public class WebSocketController {
     public ResponseEntity<String> pushToWeb(String message, @PathVariable String toUserId) throws Exception {
 
         boolean flag = WebSocketServer.sendInfo(message, toUserId);
+        System.out.println("添加新代码");
         return flag == true ? ResponseEntity.ok("消息推送成功...") : ResponseEntity.ok("消息推送失败，用户不在线...");
+
     }
 
 
