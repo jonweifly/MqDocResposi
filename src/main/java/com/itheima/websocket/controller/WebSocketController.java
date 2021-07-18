@@ -36,6 +36,8 @@ public class WebSocketController {
 
         boolean flag = WebSocketServer.sendInfo(message, toUserId);
         System.out.println("添加新代码");
+
+        System.out.println("新增代码aaaaaa");
         return flag == true ? ResponseEntity.ok("消息推送成功...") : ResponseEntity.ok("消息推送失败，用户不在线...");
 
     }
